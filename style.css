@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: grey;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.apply {
+  max-width: 600px;
+  padding: 20px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 10px;
+  box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+  border-radius: 10px;
+}
+
+.form_container {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min, max, (200px, 1fr));
+  gap: 20px;
+}
+
+.form_control {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-size: 20px;
+  font-weight: 500;
+}
+input,
+select,
+textarea {
+  padding: 6px 10px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  font-size: 15px;
+}
+.btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2px;
+}
+button {
+  background-color: rgb(80, 80, 228);
+  border: transparent solid 2px;
+  border-radius: 3px;
+  padding: 5px 10px;
+  transition: 0.2s ease-in;
+  margin: 14px 3px;
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 255, 0.904);
+  color: azure;
+  transition: 0.2s ease-out;
+}
+.text_control {
+  grid-column: 1 / span 2;
+}
+.text_control textarea {
+  width: 99.5%;
+}
+@media only screen and (max-width: 500px) {
+  .form_container {
+    margin-top: 15px;
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+}
